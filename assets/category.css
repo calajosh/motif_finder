@@ -1,0 +1,269 @@
+/* =========================
+   CATEGORY BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 4px 12px;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+
+    border: 1px solid transparent;
+
+    box-shadow:
+        var(--shadow-xs);
+}
+
+/* =========================
+   PROBABILISTIC
+   PWM / Gibbs / MEME
+   → BLUE
+========================= */
+
+.badge-probabilistic {
+    background: var(--blue-bg);
+
+    color: var(--blue-text);
+
+    border-color: var(--blue-light);
+
+    box-shadow:
+        0 1px 4px rgba(30,136,229,0.10);
+}
+
+.txt-probabilistic {
+    color: var(--blue-primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   COMBINATORIAL
+   Pattern / Sample / Suffix
+   → GREEN
+========================= */
+
+.badge-combinatorial {
+    background: var(--green-bg);
+
+    color: var(--green-text);
+
+    border-color: var(--green-light);
+
+    box-shadow:
+        0 1px 4px rgba(67,160,71,0.10);
+}
+
+.txt-combinatorial {
+    color: var(--green-primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   COMPARATIVE
+   Graph / REDUCE / Phylo
+   → ORANGE
+========================= */
+
+.badge-comparative {
+    background: var(--orange-bg);
+
+    color: var(--orange-text);
+
+    border-color: var(--orange-light);
+
+    box-shadow:
+        0 1px 4px rgba(251,140,0,0.10);
+}
+
+.txt-comparative {
+    color: var(--orange-primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   ENSEMBLE LAYER
+   MotifVoter
+   → PURPLE
+========================= */
+
+.badge-ensemble-layer {
+    background: var(--purple-bg);
+
+    color: var(--purple-text);
+
+    border-color: var(--purple-light);
+
+    box-shadow:
+        0 1px 4px rgba(124,58,237,0.10);
+}
+
+.txt-ensemble-layer {
+    color: var(--purple-primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   PROGRESS BARS
+========================= */
+
+.progress-mini {
+    width: 100%;
+
+    height: 10px;
+
+    background: var(--gray-border);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    margin-bottom: 5px;
+
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: 999px;
+
+    transition:
+        width 0.4s ease,
+        background 0.2s ease;
+}
+
+/* =========================
+   BLUE
+========================= */
+
+.fill-blue {
+    background: linear-gradient(
+        90deg,
+        var(--blue-primary),
+        var(--blue-light)
+    );
+}
+
+/* =========================
+   GREEN
+========================= */
+
+.fill-green {
+    background: linear-gradient(
+        90deg,
+        var(--green-primary),
+        var(--green-light)
+    );
+}
+
+/* =========================
+   ORANGE
+========================= */
+
+.fill-orange {
+    background: linear-gradient(
+        90deg,
+        var(--orange-primary),
+        var(--orange-light)
+    );
+}
+
+/* =========================
+   RED
+========================= */
+
+.fill-red {
+    background: linear-gradient(
+        90deg,
+        var(--red-primary),
+        var(--red-light)
+    );
+}
+
+/* =========================
+   SIMILARITY
+========================= */
+
+.similarity-fill-blue {
+    background: linear-gradient(
+        90deg,
+        var(--blue-primary),
+        var(--blue-light)
+    );
+}
+
+/* =========================
+   CONFIDENCE
+========================= */
+
+.confidence-fill {
+    background: linear-gradient(
+        90deg,
+        var(--orange-primary),
+        var(--orange-light)
+    );
+}
+
+/* =========================
+   SCORE TEXT
+========================= */
+
+.score-text {
+    font-weight: 700;
+
+    color: var(--text-primary);
+}
+
+/* =========================
+   NOTES
+========================= */
+
+.notes-text {
+    color: var(--text-secondary);
+
+    font-size: 0.85rem;
+
+    line-height: 1.4;
+}
+
+/* =========================
+   MOTIF CHIP
+========================= */
+
+.motif-chip {
+    background: linear-gradient(
+        135deg,
+        var(--orange-primary),
+        var(--yellow-light)
+    );
+
+    color: var(--white);
+
+    padding: 5px 12px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    font-family: Consolas, monospace;
+
+    display: inline-block;
+
+    box-shadow:
+        var(--shadow-sm);
+}

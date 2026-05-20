@@ -1,0 +1,252 @@
+/* =========================
+   TABLE CELLS
+========================= */
+
+table td {
+    padding: 14px 10px;
+
+    vertical-align: top;
+}
+
+table {
+    border-collapse: separate;
+
+    border-spacing: 0 8px;
+}
+
+/* =========================
+   SEQUENCE LOGO
+========================= */
+
+.logo-axis text {
+    font-size: 13px;
+
+    fill: var(--text-secondary);
+}
+
+.logo-title {
+    font-size: 15px;
+
+    color: var(--text-primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   SECONDARY BUTTONS
+========================= */
+
+.btn-secondary,
+.dt-button {
+    background: linear-gradient(
+        135deg,
+        var(--blue-primary),
+        var(--blue-light)
+    ) !important;
+
+    color: var(--white) !important;
+
+    border: 1px solid var(--blue-light) !important;
+
+    border-radius: 10px !important;
+
+    padding: 8px 14px !important;
+
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    box-shadow:
+        var(--shadow-xs);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-secondary:hover,
+.dt-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+/* =========================
+   DATATABLES FILTER
+========================= */
+
+.dataTables_filter input {
+    border: 1px solid var(--border-soft);
+
+    border-radius: 10px;
+
+    padding: 6px 10px;
+
+    background: var(--card-bg);
+
+    color: var(--text-primary);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.dataTables_filter input:focus {
+    outline: none;
+
+    border-color: var(--blue-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(30,136,229,0.10);
+}
+
+/* =========================
+   NOTES TOGGLE
+========================= */
+
+.notes-toggle {
+    margin-top: 8px;
+
+    display: inline-block;
+
+    border: 1px solid var(--purple-light);
+
+    background: var(--purple-bg);
+
+    color: var(--purple-primary);
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow:
+        var(--shadow-xs);
+}
+
+.notes-toggle:hover {
+    background: var(--hover-light);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+/* =========================
+   NOTES CONTENT
+========================= */
+
+.notes-content {
+    margin: 8px 0 0;
+}
+
+/* =========================
+   NOTES ICON
+========================= */
+
+.notes-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    margin-left: 8px;
+
+    border-radius: 999px;
+
+    background: var(--purple-bg);
+
+    color: var(--purple-primary);
+
+    border: 1px solid var(--purple-light);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+    user-select: none;
+
+    box-shadow:
+        var(--shadow-xs);
+}
+
+.notes-icon:hover {
+    background: var(--hover-light);
+
+    transform: scale(1.08);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+/* =========================
+   NOTES POPUP
+========================= */
+
+.notes-popup {
+    display: none;
+
+    margin-top: 10px;
+
+    background: var(--glass-white-strong);
+
+    border: 1px solid var(--border-soft);
+
+    border-left: 4px solid var(--purple-primary);
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    box-shadow:
+        var(--shadow-md);
+
+    line-height: 1.6;
+
+    color: var(--text-secondary);
+
+    backdrop-filter: blur(6px);
+}
+
+/* =========================
+   MATCH MODE
+========================= */
+
+.match-mode {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 0.72rem;
+
+    color: var(--text-secondary);
+}

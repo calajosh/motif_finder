@@ -1,0 +1,146 @@
+/* =========================
+   MINI PROGRESS BAR
+========================= */
+
+.progress-mini {
+    position: relative;
+
+    width: 100%;
+
+    height: 22px;
+
+    background: var(--gray-border);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    margin-bottom: 4px;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   PROGRESS LABEL
+========================= */
+
+.progress-label {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+    z-index: 2;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 1px 2px rgba(255,255,255,0.45);
+}
+
+/* =========================
+   SCORE PROGRESS
+========================= */
+
+.score-progress {
+    position: relative;
+
+    width: 100%;
+
+    height: 22px;
+
+    background: var(--gray-border);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   SCORE PROGRESS FILL
+========================= */
+
+.score-progress-fill {
+    height: 100%;
+
+    border-radius: 999px;
+
+    transition:
+        width 0.4s ease,
+        background 0.2s ease;
+
+    position: relative;
+}
+
+/* subtle shine */
+.score-progress-fill::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+
+    background: rgba(255,255,255,0.18);
+
+    border-radius: inherit;
+}
+
+/* =========================
+   SCORE LABEL
+========================= */
+
+.score-progress-label {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+    white-space: nowrap;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 1px 2px rgba(255,255,255,0.45);
+}
+.score-progress {
+    position: relative;
+}
+
+.score-progress-label {
+    mix-blend-mode: normal;
+}
+.outside-label {
+    color: var(--text-primary);
+
+    left: calc(100% + 8px);
+
+    transform: translateY(-50%);
+}

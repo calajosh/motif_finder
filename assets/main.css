@@ -1,0 +1,514 @@
+:root {
+
+    /* =========================
+       BLUE
+    ========================= */
+
+    --blue-primary: #1e88e5;
+    --blue-dark: #1565c0;
+    --blue-light: #42a5f5;
+    --blue-bg: #f4f8fb;
+    --blue-border: rgba(30,136,229,0.12);
+    --blue-text: #0f4c81;
+
+    /* =========================
+       GREEN
+    ========================= */
+
+    --green-primary: #43a047;
+    --green-dark: #2e7d32;
+    --green-light: #66bb6a;
+    --green-bg: #f3f9f5;
+    --green-border: rgba(67,160,71,0.12);
+    --green-text: #14532d;
+
+    /* =========================
+       YELLOW
+    ========================= */
+
+    --yellow-primary: #fbc02d;
+    --yellow-dark: #f9a825;
+    --yellow-light: #ffd54f;
+    --yellow-bg: #fffdf2;
+    --yellow-border: rgba(251,192,45,0.14);
+    --yellow-text: #5c4700;
+
+    /* =========================
+       ORANGE
+    ========================= */
+
+    --orange-primary: #fb8c00;
+    --orange-dark: #ef6c00;
+    --orange-light: #ffb74d;
+    --orange-bg: #fff8f0;
+    --orange-border: rgba(251,140,0,0.12);
+    --orange-text: #9a3412;
+
+    /* =========================
+       RED
+    ========================= */
+
+    --red-primary: #e53935;
+    --red-dark: #c62828;
+    --red-light: #ef5350;
+    --red-bg: #fff5f6;
+    --red-border: rgba(229,57,53,0.12);
+    --red-text: #7f1d1d;
+
+    /* =========================
+       PURPLE
+    ========================= */
+
+    --purple-primary: #7c3aed;
+    --purple-dark: #6d28d9;
+    --purple-light: #a78bfa;
+    --purple-bg: #f8f5ff;
+    --purple-border: rgba(124,58,237,0.12);
+    --purple-text: #4c1d95;
+
+    /* =========================
+       NEUTRAL
+    ========================= */
+
+    --gray-bg: #f2f5f9;
+    --gray-light: #f8fafc;
+    --gray-border: #cbd5e1;
+
+    --white: #ffffff;
+    --black: #000000;
+
+    /* =========================
+    GLASS / TRANSPARENCY
+    ========================= */
+
+    --glass-white-soft: rgba(255,255,255,0.58);
+    --glass-white-medium: rgba(255,255,255,0.72);
+    --glass-white-strong: rgba(255,255,255,0.92);
+
+    --glass-dark-soft: rgba(15,23,42,0.58);
+    --glass-dark-medium: rgba(15,23,42,0.72);
+    --glass-dark-strong: rgba(15,23,42,0.92);
+
+    /* =========================
+    SHADOWS
+    ========================= */
+
+    --shadow-xs: 0 1px 2px rgba(0,0,0,0.03);
+
+    --shadow-sm:
+        0 2px 6px rgba(0,0,0,0.04);
+
+    --shadow-md:
+        0 4px 12px rgba(0,0,0,0.06);
+
+    --shadow-lg:
+        0 8px 20px rgba(0,0,0,0.08);
+
+    --shadow-xl:
+        0 20px 45px rgba(0,0,0,0.12);
+
+    /* =========================
+    OVERLAYS
+    ========================= */
+
+    --overlay-light: rgba(255,255,255,0.78);
+    --overlay-dark: rgba(15,23,42,0.78);
+
+    /* =========================
+    HOVER STATES
+    ========================= */
+
+    --hover-light: rgba(255,255,255,0.96);
+    --hover-blue: rgba(219,234,254,0.70);
+    --hover-green: rgba(220,252,231,0.70);
+
+    /* =========================
+       SEMANTIC TOKENS
+    ========================= */
+
+    --color-primary: var(--blue-primary);
+    --color-success: var(--green-primary);
+    --color-warning: var(--orange-primary);
+    --color-danger: var(--red-primary);
+    --color-highlight: var(--yellow-primary);
+    --color-accent: var(--purple-primary);
+
+    /* =========================
+       LIGHT MODE
+    ========================= */
+
+    --page-bg: #f2f5f9;
+    --card-bg: #ffffff;
+    --panel-bg: #f8fafc;
+
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+
+    --border-soft: #cbd5e1;
+    --shadow-soft: rgba(16,24,40,0.10);
+
+    /* SURFACES */
+    --surface-1: var(--card-bg);
+    --surface-2: var(--panel-bg);
+    --surface-3: var(--glass-white-medium);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* { 
+    box-sizing: border-box; 
+
+    /* GLOBAL TRANSITIONS */
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+body {
+    margin: 0;
+
+    background: var(--page-bg);
+
+    color: var(--text-primary);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.page-shell { 
+    max-width: 1100px; 
+    margin: 40px auto; 
+    padding: 0 18px; 
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--blue-primary),
+        var(--green-primary)
+    );
+
+    color: var(--white);
+
+    border-radius: 24px;
+
+    padding: 34px 42px;
+
+    box-shadow:var(--shadow-xl);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    opacity: 0.85;
+}
+
+h1 {
+    margin: 8px 0 10px;
+
+    font-size: 38px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.main-card {
+    background: var(--card-bg);
+
+    color: var(--text-primary);
+
+    margin-top: -18px;
+
+    padding: 34px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 24px 70px var(--shadow-soft);
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.canvas-container,
+.academic-note,
+.confidence,
+.weight-explanation {
+    background: var(--card-bg);
+
+    color: var(--text-primary);
+
+    border-color: var(--border-soft);
+}
+
+/* =========================
+   SECONDARY TEXT
+========================= */
+
+.hint,
+.confidence-note,
+.logo-caption,
+.match-mode {
+    color: var(--text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .page-shell {
+        margin: 24px auto;
+
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding: 28px 24px;
+
+        border-radius: 20px;
+    }
+
+    .main-card { 
+        padding: 22px; 
+    }
+
+    h1 { 
+        font-size: 30px; 
+    }
+
+    .logo-col { 
+        width: 50px; 
+    }
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
+
+    padding: 9px 14px;
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.28);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero {
+    position: relative;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    --page-bg: #0b1220;
+    --card-bg: #111827;
+    --panel-bg: #1f2937;
+
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+
+    --border-soft: #334155;
+    --shadow-soft: rgba(0,0,0,0.45);
+
+    --glass-white-soft: rgba(30,41,59,0.72);
+    --glass-white-medium: rgba(30,41,59,0.84);
+    --glass-white-strong: rgba(30,41,59,0.96);
+
+    --hover-light: rgba(51,65,85,0.96);
+    --hover-blue: rgba(30,58,138,0.45);
+    --hover-green: rgba(22,101,52,0.45);
+
+    --gray-light: #1f2937;
+    --gray-border: #475569;
+
+    --shadow-xs: 0 1px 2px rgba(0,0,0,0.25);
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.30);
+    --shadow-md: 0 6px 16px rgba(0,0,0,0.35);
+    --shadow-lg: 0 10px 26px rgba(0,0,0,0.40);
+    --shadow-xl: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: var(--panel-bg);
+    color: var(--text-primary);
+    border-color: var(--border-soft);
+}
+
+body.dark-mode table,
+body.dark-mode .dataTables_wrapper {
+    color: var(--text-primary);
+}
+
+.main-card > section,
+.main-card > div {
+    margin-bottom: 24px;
+}
+
+/* =========================
+   DARK MODE PATCH
+========================= */
+
+body.dark-mode section,
+body.dark-mode .main-card,
+body.dark-mode .table-wrap,
+body.dark-mode .canvas-container,
+body.dark-mode .academic-note,
+body.dark-mode .confidence,
+body.dark-mode .weight-explanation,
+body.dark-mode .disclaimer-box,
+body.dark-mode .formula-box,
+body.dark-mode .formula-card,
+body.dark-mode .weight-card,
+body.dark-mode .algorithm-card,
+body.dark-mode .logo-caption-box,
+body.dark-mode .notes-popup {
+    background: linear-gradient(
+        135deg,
+        var(--glass-white-strong),
+        var(--glass-white-soft)
+    ) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-soft) !important;
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode small,
+body.dark-mode label,
+body.dark-mode td,
+body.dark-mode th,
+body.dark-mode li {
+    color: inherit;
+}
+
+body.dark-mode .hint,
+body.dark-mode .algorithm-notes,
+body.dark-mode .notes-text,
+body.dark-mode .confidence-note,
+body.dark-mode .logo-caption,
+body.dark-mode .match-mode,
+body.dark-mode .weight-card p,
+body.dark-mode .academic-note p,
+body.dark-mode .disclaimer-box p {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .dataTables_filter input {
+    background: var(--panel-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-soft) !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode pre,
+body.dark-mode .sequence-list pre,
+body.dark-mode #logoCanvas,
+body.dark-mode .logo-box {
+    background: #0f172a !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-soft) !important;
+}
+
+body.dark-mode .progress-mini,
+body.dark-mode .score-progress {
+    background: #475569 !important;
+}
+
+body.dark-mode .weight-percent {
+    background: rgba(15,23,42,0.72) !important;
+}
+
+body.dark-mode .final-motif,
+body.dark-mode .motif-chip,
+body.dark-mode mark {
+    color: var(--red-primary) !important;
+}
+
+
+/* =========================
+   DARK MODE BADGE LINKS
+========================= */
+
+body.dark-mode .badge a,
+body.dark-mode .badge a:visited,
+body.dark-mode .badge a:hover,
+body.dark-mode .badge a:active {
+    color: inherit !important;
+
+    text-decoration: none !important;
+}
+
+/* FORCE ALGORITHM BADGE TEXT */
+
+body.dark-mode .algorithm-card .badge,
+body.dark-mode .algorithm-card .badge * {
+    color: inherit !important;
+
+    opacity: 1 !important;
+
+    text-shadow: none !important;
+}

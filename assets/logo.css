@@ -1,0 +1,386 @@
+/* =========================
+   CANVAS CONTAINER
+========================= */
+
+.canvas-container {
+    width: 100%;
+
+    background: linear-gradient(
+        135deg,
+        var(--glass-white-strong),
+        var(--glass-white-soft)
+    );
+
+    border-radius: 18px;
+
+    border: 1px solid var(--blue-border);
+
+    box-shadow:
+        var(--shadow-md),
+        var(--shadow-xs);
+
+    padding: 26px 34px 18px;
+
+    margin-top: 14px;
+
+    overflow: visible;
+
+    position: relative;
+
+    backdrop-filter: blur(6px);
+}
+
+/* =========================
+   TOP ACCENT
+========================= */
+
+.canvas-container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 18px;
+
+    width: calc(100% - 36px);
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        var(--blue-primary),
+        var(--green-primary),
+        var(--yellow-primary),
+        var(--red-primary)
+    );
+
+    border-radius: 999px;
+
+    opacity: 0.95;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.canvas-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    color: var(--text-primary);
+
+    font-size: 1.08rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   LOGO CANVAS
+========================= */
+
+#logoCanvas {
+    display: block;
+
+    margin: 0 auto;
+
+    background: var(--card-bg);
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border-soft);
+
+    padding: 0;
+
+    box-shadow:
+        var(--shadow-xs);
+}
+
+/* =========================
+   LEGEND
+========================= */
+
+.legend {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 26px;
+
+    margin: 22px 0 12px;
+
+    font-size: 0.96rem;
+}
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: var(--glass-white-medium);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 999px;
+
+    padding: 8px 14px;
+
+    box-shadow:
+        var(--shadow-xs);
+
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+
+    backdrop-filter: blur(6px);
+}
+
+.legend-item:hover {
+    background: var(--hover-light);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 6px;
+
+    display: inline-block;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.4),
+        0 1px 2px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   TOOLTIP
+========================= */
+
+.tooltip {
+    position: fixed;
+
+    background: var(--glass-white-strong);
+
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 12px;
+
+    padding: 10px 16px;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+
+    min-width: 150px;
+
+    box-shadow:
+        var(--shadow-lg);
+
+    backdrop-filter: blur(8px);
+
+    pointer-events: none;
+
+    display: none;
+
+    z-index: 99999;
+
+    transition:
+        opacity 0.12s ease,
+        transform 0.12s ease;
+}
+
+.tooltip b {
+    color: var(--blue-primary);
+}
+
+/* =========================
+   CAPTION BOX
+========================= */
+
+.logo-caption-box {
+    margin-top: 18px;
+
+    padding: 14px 18px;
+
+    background: var(--glass-white-medium);
+
+    border: 1px solid var(--blue-border);
+
+    border-left: 5px solid var(--blue-primary);
+
+    border-radius: 12px;
+
+    box-shadow:
+        var(--shadow-xs);
+
+    backdrop-filter: blur(6px);
+}
+
+.logo-caption {
+    margin: 0;
+
+    font-size: 0.90rem;
+
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+
+    text-align: justify;
+}
+
+/* =========================
+   LEGACY LOGO CLASSES
+========================= */
+
+.logo-box {
+    background: var(--card-bg);
+
+    border-radius: 16px;
+
+    border: 1px solid var(--border-soft);
+
+    box-shadow:
+        var(--shadow-lg);
+
+    padding: 28px 22px 16px;
+
+    margin: 14px 0 28px;
+
+    position: relative;
+}
+
+.bits-label {
+    position: absolute;
+
+    left: 24px;
+    top: 16px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+.logo-grid {
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border-left: 2px solid var(--border-soft);
+
+    border-bottom: 2px solid var(--border-soft);
+
+    margin-left: 30px;
+
+    padding: 0 20px;
+
+    background: repeating-linear-gradient(
+        to top,
+        transparent,
+        transparent 68px,
+        var(--gray-light) 69px
+    );
+}
+
+.logo-col {
+    width: 82px;
+
+    height: 200px;
+
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.logo-letter {
+    font-weight: 900;
+
+    font-family: Arial Black, Arial, sans-serif;
+
+    display: block;
+}
+
+/* =========================
+   NUCLEOTIDE COLORS
+========================= */
+
+.base-a {
+    color: var(--green-primary);
+}
+
+.base-c {
+    color: var(--blue-primary);
+}
+
+.base-g {
+    color: var(--yellow-primary);
+}
+
+.base-t {
+    color: var(--red-primary);
+}
+
+/* =========================
+   AXIS
+========================= */
+
+.axis {
+    display: grid;
+
+    grid-template-columns:
+        40px repeat(var(--cols, 6), 82px) 40px;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+    text-align: center;
+}
+
+/* =========================
+   LOGO LEGEND
+========================= */
+
+.legend-item {
+    color: var(--text-primary);
+}
+
+/* DARK MODE */
+
+body.dark-mode .legend-item {
+    background: rgba(30,41,59,0.82);
+
+    border-color: rgba(255,255,255,0.08);
+
+    color: #f8fafc;
+}

@@ -1,0 +1,98 @@
+/* =========================
+   FILL COLORS
+========================= */
+
+.fill-content {
+    color: var(--text-primary);
+}
+
+/* BLUE → OPTIMIZED */
+.fill-blue, .fill-blue::before {
+    background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+}
+.fill-content-blue {
+    color: var(--blue-light);
+}
+.fill-label-blue {
+    color: var(--blue-primary);
+}
+
+/* GREEN → OPERATIONAL */
+.fill-green, .fill-green::before {
+    background: linear-gradient(90deg, var(--green-primary), var(--green-light));
+}
+.fill-content-green {
+    color: var(--green-light);
+}
+.fill-label-green {
+    color: var(--green-primary);
+}
+
+/* ORANGE → WARNING */
+.fill-orange, .fill-orange::before {
+    background: linear-gradient(90deg, var(--orange-primary), var(--orange-light));
+}
+.fill-content-orange {
+    color: var(--orange-light);
+}
+.fill-label-orange {
+    color: var(--orange-primary);
+}
+
+/* RED → CRITICAL */
+.fill-red, .fill-red::before {
+    background: linear-gradient(90deg, var(--red-primary), var(--red-light));
+}
+.fill-content-red {
+    color: var(--red-light);
+}
+.fill-label-red {
+    color: var(--red-primary);
+}
+
+/* =========================
+   FORMULA CARD VARIANTS
+========================= */
+
+.card-blue strong {
+    color: var(--blue-primary);
+}
+
+/* GREEN → OPERATIONAL */
+.card-green::before {
+    background: linear-gradient(
+        90deg,
+        var(--green-primary),
+        var(--green-light)
+    ) !important;
+}
+
+.card-green strong {
+    color: var(--green-primary);
+}
+
+/* ORANGE → WARNING */
+.card-orange::before {
+    background: linear-gradient(
+        90deg,
+        var(--orange-primary),
+        var(--orange-light)
+    ) !important;
+}
+
+.card-orange strong {
+    color: var(--orange-primary);
+}
+
+/* RED → CRITICAL */
+.card-red::before {
+    background: linear-gradient(
+        90deg,
+        var(--red-primary),
+        var(--red-light)
+    ) !important;
+}
+
+.card-red strong {
+    color: var(--red-primary);
+}

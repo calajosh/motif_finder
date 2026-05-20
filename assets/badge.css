@@ -1,0 +1,140 @@
+/* =========================
+   BASE BADGE
+========================= */
+
+.runtime-badge,
+.score-badge {
+    display: inline-block;
+
+    min-width: 72px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    text-align: center;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    border: 1px solid transparent;
+
+    white-space: nowrap;
+}
+
+/* =========================
+   RUNTIME BADGES
+========================= */
+
+/* Milliseconds */
+.runtime-badge-ms {
+    background: var(--green-bg) !important;
+    color: var(--green-text) !important;
+    border-color: var(--green-light) !important;
+}
+
+/* Seconds */
+.runtime-badge-sec {
+    background: var(--blue-bg) !important;
+    color: var(--blue-text) !important;
+    border-color: var(--blue-light) !important;
+}
+
+/* Minutes */
+.runtime-badge-min {
+    background: var(--orange-bg) !important;
+    color: var(--orange-text) !important;
+    border-color: var(--orange-light) !important;
+}
+
+/* Hours */
+.runtime-badge-hr {
+    background: var(--red-bg) !important;
+    color: var(--red-text) !important;
+    border-color: var(--red-light) !important;
+}
+
+/* =========================
+   SCORE BADGES
+========================= */
+
+/* 75–100 */
+.score-badge-excellent {
+    background: var(--blue-bg) !important;
+    color: var(--blue-text) !important;
+    border-color: var(--blue-light) !important;
+}
+
+/* 50–74 */
+.score-badge-good {
+    background: var(--green-bg) !important;
+    color: var(--green-text) !important;
+    border-color: var(--green-light) !important;
+}
+
+/* 25–49 */
+.score-badge-moderate {
+    background: var(--orange-bg) !important;
+    color: var(--orange-text) !important;
+    border-color: var(--orange-light) !important;
+}
+
+/* 0–24 */
+.score-badge-low,
+.score-badge-very-low {
+    background: var(--red-bg) !important;
+    color: var(--red-text) !important;
+    border-color: var(--red-light) !important;
+}
+
+/* =========================
+   DARK MODE BADGES
+========================= */
+
+body.dark-mode .badge {
+    color: #0f172a !important;
+}
+
+/* PROBABILISTIC */
+body.dark-mode .badge-probabilistic {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    border-color: #60a5fa !important;
+}
+
+/* COMBINATORIAL */
+body.dark-mode .badge-combinatorial {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border-color: #4ade80 !important;
+}
+
+/* COMPARATIVE */
+body.dark-mode .badge-comparative {
+    background: #ffedd5 !important;
+    color: #ea580c !important;
+    border-color: #fb923c !important;
+}
+
+/* ENSEMBLE */
+body.dark-mode .badge-ensemble-layer {
+    background: #f3e8ff !important;
+    color: #7e22ce !important;
+    border-color: #c084fc !important;
+}
+
+/* =========================
+   FORCE BADGE TEXT VISIBILITY
+========================= */
+
+.badge,
+.badge * {
+    color: inherit !important;
+}
+
+body.dark-mode .algorithm-card .badge {
+    font-weight: 800;
+
+    text-shadow: none !important;
+}

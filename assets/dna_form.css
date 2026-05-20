@@ -1,0 +1,304 @@
+/* =========================
+   NOTICE
+========================= */
+
+.notice {
+    background: var(--green-bg);
+
+    border-left: 5px solid var(--green-primary);
+
+    padding: 12px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+
+    color: var(--green-text);
+
+    font-weight: 600;
+
+    box-shadow:
+        var(--shadow-xs);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: 0;
+
+    background: var(--green-primary);
+
+    color: var(--white);
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background: var(--green-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+button[type="submit"] {
+    min-width: 180px;
+
+    font-size: 0.96rem;
+
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.input-form label {
+    display: block;
+
+    font-weight: 700;
+
+    margin: 18px 0 8px;
+
+    color: var(--blue-text);
+}
+
+.hint {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+textarea,
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 15px;
+
+    background: var(--panel-bg);
+
+    color: var(--text-primary);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+textarea {
+    font-family: Consolas, monospace;
+
+    resize: vertical;
+
+    line-height: 1.6;
+
+    font-size: 0.94rem;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+
+    border-color: var(--blue-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(30,136,229,0.10);
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 14px;
+
+    margin: 22px 0 10px;
+
+    flex-wrap: wrap;
+}
+
+.controls label {
+    margin: 0;
+}
+
+.controls input {
+    width: 110px;
+}
+
+#motif_length {
+    width: 90px;
+
+    height: 44px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+/* =========================
+   OR DIVIDER
+========================= */
+
+.or-divider {
+    display: flex;
+
+    align-items: center;
+
+    margin: 18px 0;
+
+    color: var(--text-secondary);
+
+    font-weight: 700;
+
+    font-size: 0.85rem;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border-soft);
+}
+
+.or-divider span {
+    padding: 0 14px;
+}
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box {
+    background: var(--glass-white-medium);
+
+    border: 2px dashed var(--blue-border);
+
+    border-radius: 16px;
+
+    padding: 26px;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+
+    backdrop-filter: blur(6px);
+}
+
+.upload-box:hover {
+    border-color: var(--blue-light);
+
+    background: var(--hover-light);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transform: translateY(-1px);
+}
+
+.upload-box.dragover {
+    background: var(--hover-blue);
+
+    border-color: var(--blue-primary);
+
+    box-shadow:
+        0 0 0 4px rgba(30,136,229,0.10);
+}
+
+.upload-box.has-file {
+    border-color: var(--green-primary);
+
+    background: var(--hover-green);
+}
+
+/* =========================
+   UPLOAD LABEL
+========================= */
+
+.upload-label {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: var(--blue-text);
+
+    cursor: pointer;
+
+    min-height: 90px;
+}
+
+.upload-icon {
+    font-weight: 900;
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    color: var(--blue-primary);
+}
+
+.upload-label small {
+    color: var(--text-secondary);
+}
+
+.upload-note {
+    color: var(--text-secondary);
+
+    font-size: 0.80rem;
+}
+
+.file-name {
+    margin-top: 6px;
+
+    font-size: 0.84rem;
+
+    color: var(--text-primary);
+
+    font-weight: 600;
+}

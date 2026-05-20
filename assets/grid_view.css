@@ -1,0 +1,361 @@
+/* =========================
+   RESULTS TOOLBAR
+========================= */
+
+.results-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-soft);
+    flex-wrap: wrap;
+}
+
+/* =========================
+   VIEW TOGGLE
+========================= */
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    border: 1px solid var(--blue-border);
+    background: var(--glass-white-medium);
+    color: var(--blue-text);
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.view-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.view-btn.active {
+    background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   GRID FILTERS
+========================= */
+
+.grid-controls {
+    display: none !important;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.grid-controls.show-grid-controls {
+    display: flex !important;
+}
+
+.grid-controls input,
+.grid-controls select {
+    border: 1px solid var(--border-soft);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    outline: none;
+    box-shadow: var(--shadow-xs);
+}
+
+.grid-controls input:focus,
+.grid-controls select:focus {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 0 4px rgba(30,136,229,0.10);
+}
+
+/* =========================
+   VIEW STATES
+========================= */
+
+.results-view {
+    display: none !important;
+}
+
+.results-view.active-view {
+    display: block !important;
+}
+
+.grid-view.active-view {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+/* =========================
+   ALGORITHM CARD
+========================= */
+
+.algorithm-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background: linear-gradient(
+    180deg,
+        var(--glass-white-strong),
+        var(--glass-white-medium)
+    );
+
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 14px 16px;
+
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    border-color: rgba(30,136,229,0.18);
+}
+
+.algorithm-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14px;
+    width: calc(100% - 28px);
+    height: 4px;
+    border-radius: 999px;
+}
+
+.card-probabilistic::before {
+    background: linear-gradient(90deg, var(--blue-primary), var(--blue-light));
+}
+
+.card-combinatorial::before {
+    background: linear-gradient(90deg, var(--green-primary), var(--green-light));
+}
+
+.card-comparative::before {
+    background: linear-gradient(90deg, var(--orange-primary), var(--orange-light));
+}
+
+.card-ensemble-layer::before {
+    background: linear-gradient(90deg, var(--purple-primary), var(--purple-light));
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.algorithm-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.algorithm-card-header .badge {
+    white-space: normal;
+    line-height: 1.35;
+}
+
+.algorithm-card-header .motif-chip {
+    flex-shrink: 0;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.algorithm-category {
+    margin: 8px 0 6px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    opacity: 0.92;
+}
+
+.algorithm-notes {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+    
+    min-height: 38px;
+
+    font-size: 0.82rem;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   METRIC ROW
+========================= */
+
+.grid-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin: 12px 0;
+    padding: 8px 12px;
+
+    border-radius: 12px;
+    background: var(--glass-white-medium);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-xs);
+}
+
+.grid-metric span,
+.grid-progress label {
+    font-weight: 800;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.70rem;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   PROGRESS AREA
+========================= */
+
+.grid-progress {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(0,0,0,0.06);
+}
+
+.grid-progress label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.grid-progress:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Better grid progress height */
+.grid-view .progress-mini,
+.grid-view .score-progress {
+    height: 18px;
+}
+
+/* =========================
+   EMPTY FILTER STATE
+========================= */
+
+.grid-empty {
+    display: none;
+    padding: 24px;
+    border: 1px dashed var(--border-soft);
+    border-radius: 16px;
+    color: var(--text-secondary);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .grid-view.active-view {
+        grid-template-columns: 1fr;
+    }
+
+    .results-toolbar {
+        align-items: stretch;
+    }
+
+    .grid-controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .grid-controls input,
+    .grid-controls select {
+        width: 100%;
+    }
+}
+
+.algorithm-card {
+    animation: fadeUp 0.35s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   DARK MODE - GRID VIEW
+========================= */
+
+body.dark-mode .algorithm-card {
+    background: linear-gradient(
+        180deg,
+        var(--glass-dark-strong),
+        var(--glass-dark-medium)
+    ) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-soft) !important;
+}
+
+body.dark-mode .algorithm-notes,
+body.dark-mode .grid-metric span,
+body.dark-mode .grid-progress label {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .grid-metric {
+    background: var(--glass-dark-medium) !important;
+
+    border-color: var(--border-soft) !important;
+}
+
+body.dark-mode .algorithm-card .badge-probabilistic {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    border-color: #60a5fa !important;
+}
+
+body.dark-mode .algorithm-card .badge-combinatorial {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border-color: #4ade80 !important;
+}
+
+body.dark-mode .algorithm-card .badge-comparative {
+    background: #ffedd5 !important;
+    color: #ea580c !important;
+    border-color: #fb923c !important;
+}
